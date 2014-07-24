@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diziler</title>
+</head>
+
+<body>
+<?php
+
+$dizi[]="deneme";
+$dizi[]="naber";
+$kelime= 2;
+
+echo $dizi;
+echo "<br>";
+print_r($dizi);
+
+echo "<pre>";
+
+
+$dizi1=array(anahtar => "kamil","ziya");
+
+print_r($dizi1);
+
+echo "<br>";
+
+print_r(array_keys($dizi1));
+
+echo "<br>";
+
+print_r(array_values($dizi1));
+
+echo "<br>";
+
+if (is_array($dizi1)) {
+	echo "dizidir.";
+}
+else {
+	echo "dizi değil";
+}
+
+echo "<pre>";
+
+if (is_array($kelime)) {
+	echo "dizidir.";
+	
+}
+else {
+	echo "dizi değildir.";
+}
+
+echo "<pre>";
+
+echo count($dizi);
+
+echo "<pre>";
+
+
+unset($dizi[1]);
+
+print_r($dizi);
+
+
+$dizi[]="merhaba";
+
+print_r(array_flip($dizi));
+
+echo "<br>";
+
+print_r(array_reverse($dizi));
+
+echo "<br>";
+
+
+print_r(array_merge($dizi,$dizi1));
+
+echo "<br>";
+
+$dizi2=array_pad(array_merge($dizi,$dizi1),8,"boş");
+
+print_r($dizi2);
+
+echo "<br>";
+
+print_r(array_slice($dizi2,2));
+
+echo "<br>";
+
+print_r(array_count_values($dizi2));
+
+echo "<br>";
+
+
+print_r(array_change_key_case($dizi2,CASE_UPPER));
+
+echo "<br>";
+
+array_push($dizi2,"abi","ağabey");
+
+print_r($dizi2);
+
+
+echo "<br>";
+
+array_pop($dizi2);
+
+print_r($dizi2);
+
+echo "<br>";
+
+array_shift($dizi2);
+
+print_r($dizi2);
+
+echo "<br>";
+
+array_unshift($dizi2,"koçum");
+
+print_r($dizi2);
+
+echo "<br>";
+
+asort($dizi2);
+
+print_r($dizi2);
+
+echo "<br>";
+
+arsort($dizi2);
+
+print_r($dizi2);
+
+echo "<br>";
+
+ksort($dizi2);
+
+print_r($dizi2);
+
+echo "<br>";
+
+krsort($dizi2);
+
+print_r($dizi2);
+
+
+
+$dizi3=array("hacı","amca");
+
+$dizi4=array("herkesin","popisi");
+
+$dizi5=array_combine($dizi3,$dizi4);
+
+print_r($dizi5);
+
+echo "<br>";
+
+$dizi6=array(birinci=>"arap",
+ikinci=>"türk",
+ücüncü=>"kürt");
+
+$dizi7=array(birinci=>"arap",
+onuncu=>"laz",
+yüzüncü=>"türk");
+
+$goster=array_diff($dizi6,$dizi7);
+
+print_r($goster);
+
+echo "<br>";
+
+$goster2=array_diff_assoc($dizi6,$dizi7);
+
+print_r($goster2);
+
+echo "<br>";
+
+$goster3=array_diff_key($dizi6,$dizi7);
+
+print_r($goster3);
+
+
+echo "<br>";
+
+$dizi8=array_fill(99,6,"ahahhaha");
+
+print_r($dizi8);
+
+echo "<br>";
+
+$dizi9=array(5,4,3);
+
+print_r(array_product($dizi9));
+
+
+
+echo "<br>";
+
+$dizi10=array(4,6,8);
+
+print_r(array_sum($dizi10));
+
+
+echo "<br>";
+
+print_r(array_rand($dizi2,4));
+
+
+echo "<br>";
+
+list($sayi1,$sayi2,$sayi3)=$dizi9;
+
+print_r($sayi1);
+
+?>
+</body>
+</html>
